@@ -21,7 +21,7 @@ final class ViewModel {
     
     func getData(inputs: Inputs) -> Outputs {
         
-        let data = inputs.refresh.flatMap { _ in Service.request().materialize().asDriver(onErrorJustReturn: Event<MarsPhoto>.completed)
+        let data = inputs.refresh.flatMap { _ in Service().getData().materialize().asDriver(onErrorJustReturn: Event<MarsPhoto>.completed)
         }
         
         let dataDriver = data.filter { !$0.isCompleted }.map { data -> MarsPhoto in

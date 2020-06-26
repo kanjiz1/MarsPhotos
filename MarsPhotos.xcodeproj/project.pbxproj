@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD42505824A5E7B900482347 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD42505724A5E7B900482347 /* NetworkSession.swift */; };
 		CD896CBF24A5B941006DAAF6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD896CBE24A5B941006DAAF6 /* MainViewController.swift */; };
 		CD896CC124A5B974006DAAF6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD896CC024A5B974006DAAF6 /* ViewModel.swift */; };
 		CDC3ADB124A5A910008E3C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC3ADB024A5A910008E3C4C /* AppDelegate.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		0A197E6E2211031749A89EE2 /* Pods-MarsPhotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarsPhotos.debug.xcconfig"; path = "Target Support Files/Pods-MarsPhotos/Pods-MarsPhotos.debug.xcconfig"; sourceTree = "<group>"; };
 		6D70219A57A91DF599D9682B /* Pods_MarsPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarsPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD42505724A5E7B900482347 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
 		CD896CBE24A5B941006DAAF6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CD896CC024A5B974006DAAF6 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		CDC3ADAD24A5A910008E3C4C /* MarsPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarsPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +112,7 @@
 				CDE4A82724A5AF90000AD95C /* Service.swift */,
 				CD896CBE24A5B941006DAAF6 /* MainViewController.swift */,
 				CD896CC024A5B974006DAAF6 /* ViewModel.swift */,
+				CD42505724A5E7B900482347 /* NetworkSession.swift */,
 			);
 			path = MarsPhotos;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD42505824A5E7B900482347 /* NetworkSession.swift in Sources */,
 				CDE4A82524A5AE85000AD95C /* Model.swift in Sources */,
 				CDE4A82824A5AF90000AD95C /* Service.swift in Sources */,
 				CD896CBF24A5B941006DAAF6 /* MainViewController.swift in Sources */,
