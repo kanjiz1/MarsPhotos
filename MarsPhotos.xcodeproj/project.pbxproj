@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD43B28224A5B1DC007C9870 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD43B28124A5B1DC007C9870 /* NetworkSession.swift */; };
 		CDC3ADB124A5A910008E3C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC3ADB024A5A910008E3C4C /* AppDelegate.swift */; };
 		CDC3ADB724A5A911008E3C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC3ADB624A5A911008E3C4C /* Assets.xcassets */; };
 		CDC3ADBD24A5A911008E3C4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC3ADBB24A5A911008E3C4C /* LaunchScreen.storyboard */; };
 		CDC3ADC824A5A911008E3C4C /* MarsPhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC3ADC724A5A911008E3C4C /* MarsPhotosTests.swift */; };
 		CDE4A82224A5ABCB000AD95C /* Mars.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDE4A82024A5ABCB000AD95C /* Mars.xcdatamodeld */; };
 		CDE4A82324A5ABCB000AD95C /* Mars.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDE4A82024A5ABCB000AD95C /* Mars.xcdatamodeld */; };
+		CDE4A82524A5AE85000AD95C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4A82424A5AE85000AD95C /* Model.swift */; };
+		CDE4A82624A5AE85000AD95C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4A82424A5AE85000AD95C /* Model.swift */; };
+		CDE4A82824A5AF90000AD95C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4A82724A5AF90000AD95C /* Service.swift */; };
+		CDE4A82924A5AF90000AD95C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4A82724A5AF90000AD95C /* Service.swift */; };
 		D11386BE81CA9D7F642B6E28 /* Pods_MarsPhotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03721A2D5B8E14C3FDD2EECC /* Pods_MarsPhotos.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +35,7 @@
 		03721A2D5B8E14C3FDD2EECC /* Pods_MarsPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarsPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		253251FB01FCB0F9BD7FB09C /* Pods-MarsPhotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarsPhotos.release.xcconfig"; path = "Target Support Files/Pods-MarsPhotos/Pods-MarsPhotos.release.xcconfig"; sourceTree = "<group>"; };
 		6ECAB038CF074DB6787D2573 /* Pods-MarsPhotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarsPhotos.debug.xcconfig"; path = "Target Support Files/Pods-MarsPhotos/Pods-MarsPhotos.debug.xcconfig"; sourceTree = "<group>"; };
+		CD43B28124A5B1DC007C9870 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
 		CDC3ADAD24A5A910008E3C4C /* MarsPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarsPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC3ADB024A5A910008E3C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDC3ADB624A5A911008E3C4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +45,8 @@
 		CDC3ADC724A5A911008E3C4C /* MarsPhotosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotosTests.swift; sourceTree = "<group>"; };
 		CDC3ADC924A5A911008E3C4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDE4A82124A5ABCB000AD95C /* Mars.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mars.xcdatamodel; sourceTree = "<group>"; };
+		CDE4A82424A5AE85000AD95C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		CDE4A82724A5AF90000AD95C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,9 @@
 				CDC3ADBB24A5A911008E3C4C /* LaunchScreen.storyboard */,
 				CDC3ADBE24A5A911008E3C4C /* Info.plist */,
 				CDE4A82024A5ABCB000AD95C /* Mars.xcdatamodeld */,
+				CDE4A82424A5AE85000AD95C /* Model.swift */,
+				CDE4A82724A5AF90000AD95C /* Service.swift */,
+				CD43B28124A5B1DC007C9870 /* NetworkSession.swift */,
 			);
 			path = MarsPhotos;
 			sourceTree = "<group>";
@@ -262,6 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE4A82524A5AE85000AD95C /* Model.swift in Sources */,
+				CD43B28224A5B1DC007C9870 /* NetworkSession.swift in Sources */,
+				CDE4A82824A5AF90000AD95C /* Service.swift in Sources */,
 				CDE4A82224A5ABCB000AD95C /* Mars.xcdatamodeld in Sources */,
 				CDC3ADB124A5A910008E3C4C /* AppDelegate.swift in Sources */,
 			);
@@ -271,6 +285,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE4A82624A5AE85000AD95C /* Model.swift in Sources */,
+				CDE4A82924A5AF90000AD95C /* Service.swift in Sources */,
 				CDE4A82324A5ABCB000AD95C /* Mars.xcdatamodeld in Sources */,
 				CDC3ADC824A5A911008E3C4C /* MarsPhotosTests.swift in Sources */,
 			);
