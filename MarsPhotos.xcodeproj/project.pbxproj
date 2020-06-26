@@ -3,13 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		CDC3ADB124A5A910008E3C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC3ADB024A5A910008E3C4C /* AppDelegate.swift */; };
-		CDC3ADB324A5A910008E3C4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC3ADB224A5A910008E3C4C /* SceneDelegate.swift */; };
-		CDC3ADB524A5A910008E3C4C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC3ADB424A5A910008E3C4C /* ContentView.swift */; };
 		CDC3ADB724A5A911008E3C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC3ADB624A5A911008E3C4C /* Assets.xcassets */; };
 		CDC3ADBA24A5A911008E3C4C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC3ADB924A5A911008E3C4C /* Preview Assets.xcassets */; };
 		CDC3ADBD24A5A911008E3C4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC3ADBB24A5A911008E3C4C /* LaunchScreen.storyboard */; };
@@ -33,8 +31,6 @@
 		6ECAB038CF074DB6787D2573 /* Pods-MarsPhotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarsPhotos.debug.xcconfig"; path = "Target Support Files/Pods-MarsPhotos/Pods-MarsPhotos.debug.xcconfig"; sourceTree = "<group>"; };
 		CDC3ADAD24A5A910008E3C4C /* MarsPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarsPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC3ADB024A5A910008E3C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CDC3ADB224A5A910008E3C4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CDC3ADB424A5A910008E3C4C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CDC3ADB624A5A911008E3C4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDC3ADB924A5A911008E3C4C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CDC3ADBC24A5A911008E3C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,8 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				CDC3ADB024A5A910008E3C4C /* AppDelegate.swift */,
-				CDC3ADB224A5A910008E3C4C /* SceneDelegate.swift */,
-				CDC3ADB424A5A910008E3C4C /* ContentView.swift */,
 				CDC3ADB624A5A911008E3C4C /* Assets.xcassets */,
 				CDC3ADBB24A5A911008E3C4C /* LaunchScreen.storyboard */,
 				CDC3ADBE24A5A911008E3C4C /* Info.plist */,
@@ -120,7 +114,6 @@
 				6ECAB038CF074DB6787D2573 /* Pods-MarsPhotos.debug.xcconfig */,
 				253251FB01FCB0F9BD7FB09C /* Pods-MarsPhotos.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -278,8 +271,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDC3ADB124A5A910008E3C4C /* AppDelegate.swift in Sources */,
-				CDC3ADB324A5A910008E3C4C /* SceneDelegate.swift in Sources */,
-				CDC3ADB524A5A910008E3C4C /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
