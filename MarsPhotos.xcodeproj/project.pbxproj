@@ -14,6 +14,7 @@
 		CDC3ADBA24A5A911008E3C4C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC3ADB924A5A911008E3C4C /* Preview Assets.xcassets */; };
 		CDC3ADBD24A5A911008E3C4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC3ADBB24A5A911008E3C4C /* LaunchScreen.storyboard */; };
 		CDC3ADC824A5A911008E3C4C /* MarsPhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC3ADC724A5A911008E3C4C /* MarsPhotosTests.swift */; };
+		D11386BE81CA9D7F642B6E28 /* Pods_MarsPhotos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03721A2D5B8E14C3FDD2EECC /* Pods_MarsPhotos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03721A2D5B8E14C3FDD2EECC /* Pods_MarsPhotos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarsPhotos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		253251FB01FCB0F9BD7FB09C /* Pods-MarsPhotos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarsPhotos.release.xcconfig"; path = "Target Support Files/Pods-MarsPhotos/Pods-MarsPhotos.release.xcconfig"; sourceTree = "<group>"; };
+		6ECAB038CF074DB6787D2573 /* Pods-MarsPhotos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarsPhotos.debug.xcconfig"; path = "Target Support Files/Pods-MarsPhotos/Pods-MarsPhotos.debug.xcconfig"; sourceTree = "<group>"; };
 		CDC3ADAD24A5A910008E3C4C /* MarsPhotos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarsPhotos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC3ADB024A5A910008E3C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDC3ADB224A5A910008E3C4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11386BE81CA9D7F642B6E28 /* Pods_MarsPhotos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,8 @@
 				CDC3ADAF24A5A910008E3C4C /* MarsPhotos */,
 				CDC3ADC624A5A911008E3C4C /* MarsPhotosTests */,
 				CDC3ADAE24A5A910008E3C4C /* Products */,
+				DEBA95B2E18EF1AF4FF312D9 /* Pods */,
+				EBF973AEF0449EA680E27B10 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,6 +114,24 @@
 			path = MarsPhotosTests;
 			sourceTree = "<group>";
 		};
+		DEBA95B2E18EF1AF4FF312D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6ECAB038CF074DB6787D2573 /* Pods-MarsPhotos.debug.xcconfig */,
+				253251FB01FCB0F9BD7FB09C /* Pods-MarsPhotos.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EBF973AEF0449EA680E27B10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03721A2D5B8E14C3FDD2EECC /* Pods_MarsPhotos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CDC3ADCC24A5A911008E3C4C /* Build configuration list for PBXNativeTarget "MarsPhotos" */;
 			buildPhases = (
+				69B2EB53FCAC6E8E10ECD3B6 /* [CP] Check Pods Manifest.lock */,
 				CDC3ADA924A5A910008E3C4C /* Sources */,
 				CDC3ADAA24A5A910008E3C4C /* Frameworks */,
 				CDC3ADAB24A5A910008E3C4C /* Resources */,
+				765CFDB31B0DD48F5E04CE1F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,6 +229,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69B2EB53FCAC6E8E10ECD3B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MarsPhotos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		765CFDB31B0DD48F5E04CE1F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MarsPhotos/Pods-MarsPhotos-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MarsPhotos/Pods-MarsPhotos-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MarsPhotos/Pods-MarsPhotos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CDC3ADA924A5A910008E3C4C /* Sources */ = {
@@ -360,6 +429,7 @@
 		};
 		CDC3ADCD24A5A911008E3C4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ECAB038CF074DB6787D2573 /* Pods-MarsPhotos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -380,6 +450,7 @@
 		};
 		CDC3ADCE24A5A911008E3C4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 253251FB01FCB0F9BD7FB09C /* Pods-MarsPhotos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
