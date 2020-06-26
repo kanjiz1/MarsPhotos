@@ -43,7 +43,7 @@ final class MainViewController: UIViewController, UICollectionViewDelegate, UICo
         
         let layout = UICollectionViewFlowLayout()
         let padding: CGFloat =  50
-        let collectionViewSize = collectionView.frame.size.width - padding
+        let collectionViewSize = view.frame.size.width - padding
         layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
         layout.itemSize = CGSize(width: collectionViewSize / 2, height: collectionViewSize / 2)
 

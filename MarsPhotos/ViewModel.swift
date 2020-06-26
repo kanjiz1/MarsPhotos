@@ -54,14 +54,25 @@ extension UIImageView {
         self.image = nil
 
         let imageServerUrl = URLString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        
 
         if let cachedImage = imageCache.object(forKey: NSString(string: imageServerUrl)) {
             self.image = cachedImage
             return
         }
 
-        if let url = URL(string: imageServerUrl) {
-            URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+        guard let url = URL(string: imageServerUrl) else {
+            return
+        }
+        
+        /// I noticed the url from the api is not secure
+        /// this caused some issues with App Transport security
+        /// So I had to change the scheme to load images
+        var comps = URLComponents(url: url, resolvingAgainstBaseURL: false)!
+        comps.scheme = "https"
+        
+        if let https = comps.url {
+            URLSession.shared.dataTask(with: https, completionHandler: { (data, response, error) in
                 if error != nil {
                     print("Error occured: \(error!)")
                     DispatchQueue.main.async {
@@ -76,7 +87,7 @@ extension UIImageView {
                             self.image = downloadedImage
                         }
                     }
-                }
+            }
             }).resume()
         }
     }
