@@ -16,7 +16,7 @@ final class ViewModel {
     }
     
     struct Outputs {
-        let data: Driver<MarsPhoto>
+        let dataSource: Driver<NSDiffableDataSourceSnapshot<MainViewController.Section, MainViewController.Item>>
     }
     
     func getData(inputs: Inputs) -> Outputs {
@@ -24,18 +24,60 @@ final class ViewModel {
         let data = inputs.refresh.flatMap { _ in Service().getData().materialize().asDriver(onErrorJustReturn: Event<MarsPhoto>.completed)
         }
         
-        let dataDriver = data.filter { !$0.isCompleted }.map { data -> MarsPhoto in
-            var photos: MarsPhoto = MarsPhoto(photos: [])
+        let dataSource = data.filter { !$0.isCompleted }.map { data -> NSDiffableDataSourceSnapshot<MainViewController.Section, MainViewController.Item> in
+            var datasource = NSDiffableDataSourceSnapshot<MainViewController.Section, MainViewController.Item>()
             switch data {
             case .next(let photoData):
-                photos = photoData
+                datasource.appendSections([.main])
+                photoData.photos.forEach { photo in
+                    datasource.appendItems([.main((photo))], toSection: .main)
+                }
             default:
                 break
             }
             
-            return photos
+            return datasource
         }
         
-        return Outputs(data: dataDriver)
+        return Outputs(dataSource: dataSource)
+    }
+}
+
+extension UIImageView {
+
+    private var imageCache: NSCache<NSString, UIImage> {
+        let cache = NSCache<NSString, UIImage>()
+        return cache
+    }
+
+    func imageFromServerURL(_ URLString: String, placeHolder: UIImage?) {
+        self.image = nil
+
+        let imageServerUrl = URLString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+
+        if let cachedImage = imageCache.object(forKey: NSString(string: imageServerUrl)) {
+            self.image = cachedImage
+            return
+        }
+
+        if let url = URL(string: imageServerUrl) {
+            URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+                if error != nil {
+                    print("Error occured: \(error!)")
+                    DispatchQueue.main.async {
+                        self.image = placeHolder
+                    }
+                    return
+                }
+                DispatchQueue.main.async {
+                    if let data = data {
+                        if let downloadedImage = UIImage(data: data) {
+                            self.imageCache.setObject(downloadedImage, forKey: NSString(string: imageServerUrl))
+                            self.image = downloadedImage
+                        }
+                    }
+                }
+            }).resume()
+        }
     }
 }

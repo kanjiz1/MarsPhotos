@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct MarsPhoto: Decodable {
+struct MarsPhoto: Decodable, Hashable {
     let photos: [PhotoData]
     
-    struct PhotoData: Decodable {
+    struct PhotoData: Decodable, Hashable {
         let id: Int
         let sol: Int
         let camera: Camera
@@ -19,14 +19,14 @@ struct MarsPhoto: Decodable {
         let earth_date: String
         let rover: Rover
         
-        struct Camera: Decodable {
+        struct Camera: Decodable, Hashable {
             let id: Int
             let name: String
             let rover_id: Int
             let full_name: String
         }
         
-        struct Rover: Decodable {
+        struct Rover: Decodable, Hashable {
             let id: Int
             let name: String
             let landing_date: String
