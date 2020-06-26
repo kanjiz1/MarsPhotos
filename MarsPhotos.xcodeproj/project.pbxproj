@@ -10,12 +10,21 @@
 		CD42505824A5E7B900482347 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD42505724A5E7B900482347 /* NetworkSession.swift */; };
 		CD896CBF24A5B941006DAAF6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD896CBE24A5B941006DAAF6 /* MainViewController.swift */; };
 		CD896CC124A5B974006DAAF6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD896CC024A5B974006DAAF6 /* ViewModel.swift */; };
+		CD91C98D24A60A7D00ED506A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD896CC024A5B974006DAAF6 /* ViewModel.swift */; };
+		CD91C98E24A60A8600ED506A /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD42505724A5E7B900482347 /* NetworkSession.swift */; };
+		CD91C98F24A60A8B00ED506A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD896CBE24A5B941006DAAF6 /* MainViewController.swift */; };
+		CD91C99024A60A8F00ED506A /* MarsDatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0A16824A5FFA90000F03A /* MarsDatabaseHelper.swift */; };
+		CD91C99124A60A9500ED506A /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0A16024A5FE680000F03A /* Photo+CoreDataClass.swift */; };
+		CD91C99224A60A9700ED506A /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0A15F24A5FE680000F03A /* Photo+CoreDataProperties.swift */; };
 		CDC3ADB124A5A910008E3C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC3ADB024A5A910008E3C4C /* AppDelegate.swift */; };
 		CDC3ADB724A5A911008E3C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDC3ADB624A5A911008E3C4C /* Assets.xcassets */; };
 		CDC3ADBD24A5A911008E3C4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC3ADBB24A5A911008E3C4C /* LaunchScreen.storyboard */; };
 		CDC3ADC824A5A911008E3C4C /* MarsPhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC3ADC724A5A911008E3C4C /* MarsPhotosTests.swift */; };
-		CDE4A82224A5ABCB000AD95C /* Mars.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDE4A82024A5ABCB000AD95C /* Mars.xcdatamodeld */; };
-		CDE4A82324A5ABCB000AD95C /* Mars.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDE4A82024A5ABCB000AD95C /* Mars.xcdatamodeld */; };
+		CDE0A16124A5FE680000F03A /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0A15F24A5FE680000F03A /* Photo+CoreDataProperties.swift */; };
+		CDE0A16224A5FE680000F03A /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0A16024A5FE680000F03A /* Photo+CoreDataClass.swift */; };
+		CDE0A16924A5FFA90000F03A /* MarsDatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0A16824A5FFA90000F03A /* MarsDatabaseHelper.swift */; };
+		CDE4A82224A5ABCB000AD95C /* Photo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDE4A82024A5ABCB000AD95C /* Photo.xcdatamodeld */; };
+		CDE4A82324A5ABCB000AD95C /* Photo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDE4A82024A5ABCB000AD95C /* Photo.xcdatamodeld */; };
 		CDE4A82524A5AE85000AD95C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4A82424A5AE85000AD95C /* Model.swift */; };
 		CDE4A82624A5AE85000AD95C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4A82424A5AE85000AD95C /* Model.swift */; };
 		CDE4A82824A5AF90000AD95C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4A82724A5AF90000AD95C /* Service.swift */; };
@@ -48,6 +57,9 @@
 		CDC3ADC324A5A911008E3C4C /* MarsPhotosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsPhotosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC3ADC724A5A911008E3C4C /* MarsPhotosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsPhotosTests.swift; sourceTree = "<group>"; };
 		CDC3ADC924A5A911008E3C4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDE0A15F24A5FE680000F03A /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CDE0A16024A5FE680000F03A /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CDE0A16824A5FFA90000F03A /* MarsDatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsDatabaseHelper.swift; sourceTree = "<group>"; };
 		CDE4A82124A5ABCB000AD95C /* Mars.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mars.xcdatamodel; sourceTree = "<group>"; };
 		CDE4A82424A5AE85000AD95C /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CDE4A82724A5AF90000AD95C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -103,16 +115,15 @@
 		CDC3ADAF24A5A910008E3C4C /* MarsPhotos */ = {
 			isa = PBXGroup;
 			children = (
+				CDE0A16724A5FF8A0000F03A /* CoreData */,
+				CDE0A16624A5FEF60000F03A /* ViewControllers */,
+				CDE0A16524A5FEE60000F03A /* Services */,
+				CDE0A16424A5FEDA0000F03A /* ViewModel */,
+				CDE0A16324A5FEC80000F03A /* Model */,
 				CDC3ADB024A5A910008E3C4C /* AppDelegate.swift */,
 				CDC3ADB624A5A911008E3C4C /* Assets.xcassets */,
 				CDC3ADBB24A5A911008E3C4C /* LaunchScreen.storyboard */,
 				CDC3ADBE24A5A911008E3C4C /* Info.plist */,
-				CDE4A82024A5ABCB000AD95C /* Mars.xcdatamodeld */,
-				CDE4A82424A5AE85000AD95C /* Model.swift */,
-				CDE4A82724A5AF90000AD95C /* Service.swift */,
-				CD896CBE24A5B941006DAAF6 /* MainViewController.swift */,
-				CD896CC024A5B974006DAAF6 /* ViewModel.swift */,
-				CD42505724A5E7B900482347 /* NetworkSession.swift */,
 			);
 			path = MarsPhotos;
 			sourceTree = "<group>";
@@ -124,6 +135,50 @@
 				CDC3ADC924A5A911008E3C4C /* Info.plist */,
 			);
 			path = MarsPhotosTests;
+			sourceTree = "<group>";
+		};
+		CDE0A16324A5FEC80000F03A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDE4A82424A5AE85000AD95C /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CDE0A16424A5FEDA0000F03A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD896CC024A5B974006DAAF6 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CDE0A16524A5FEE60000F03A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CDE4A82724A5AF90000AD95C /* Service.swift */,
+				CD42505724A5E7B900482347 /* NetworkSession.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CDE0A16624A5FEF60000F03A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD896CBE24A5B941006DAAF6 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CDE0A16724A5FF8A0000F03A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				CDE0A15F24A5FE680000F03A /* Photo+CoreDataProperties.swift */,
+				CDE0A16024A5FE680000F03A /* Photo+CoreDataClass.swift */,
+				CDE4A82024A5ABCB000AD95C /* Photo.xcdatamodeld */,
+				CDE0A16824A5FFA90000F03A /* MarsDatabaseHelper.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		DEBA95B2E18EF1AF4FF312D9 /* Pods */ = {
@@ -283,8 +338,11 @@
 				CDE4A82524A5AE85000AD95C /* Model.swift in Sources */,
 				CDE4A82824A5AF90000AD95C /* Service.swift in Sources */,
 				CD896CBF24A5B941006DAAF6 /* MainViewController.swift in Sources */,
-				CDE4A82224A5ABCB000AD95C /* Mars.xcdatamodeld in Sources */,
+				CDE4A82224A5ABCB000AD95C /* Photo.xcdatamodeld in Sources */,
+				CDE0A16924A5FFA90000F03A /* MarsDatabaseHelper.swift in Sources */,
 				CDC3ADB124A5A910008E3C4C /* AppDelegate.swift in Sources */,
+				CDE0A16224A5FE680000F03A /* Photo+CoreDataClass.swift in Sources */,
+				CDE0A16124A5FE680000F03A /* Photo+CoreDataProperties.swift in Sources */,
 				CD896CC124A5B974006DAAF6 /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,9 +351,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD91C98F24A60A8B00ED506A /* MainViewController.swift in Sources */,
+				CD91C98D24A60A7D00ED506A /* ViewModel.swift in Sources */,
 				CDE4A82624A5AE85000AD95C /* Model.swift in Sources */,
+				CD91C99024A60A8F00ED506A /* MarsDatabaseHelper.swift in Sources */,
 				CDE4A82924A5AF90000AD95C /* Service.swift in Sources */,
-				CDE4A82324A5ABCB000AD95C /* Mars.xcdatamodeld in Sources */,
+				CD91C98E24A60A8600ED506A /* NetworkSession.swift in Sources */,
+				CD91C99124A60A9500ED506A /* Photo+CoreDataClass.swift in Sources */,
+				CDE4A82324A5ABCB000AD95C /* Photo.xcdatamodeld in Sources */,
+				CD91C99224A60A9700ED506A /* Photo+CoreDataProperties.swift in Sources */,
 				CDC3ADC824A5A911008E3C4C /* MarsPhotosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,13 +619,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CDE4A82024A5ABCB000AD95C /* Mars.xcdatamodeld */ = {
+		CDE4A82024A5ABCB000AD95C /* Photo.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				CDE4A82124A5ABCB000AD95C /* Mars.xcdatamodel */,
 			);
 			currentVersion = CDE4A82124A5ABCB000AD95C /* Mars.xcdatamodel */;
-			path = Mars.xcdatamodeld;
+			path = Photo.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

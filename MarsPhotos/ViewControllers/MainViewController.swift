@@ -12,12 +12,18 @@ import RxSwift
 
 final class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    enum DataOrigin {
+        case coredata(Photo)
+        case server(MarsPhoto.PhotoData)
+    }
+    
     enum Section: Hashable {
         case main
     }
     
     enum Item: Hashable {
         case main(MarsPhoto.PhotoData)
+        case savedData(Photo)
     }
 
     private let viewModel: ViewModel
@@ -68,7 +74,12 @@ final class MainViewController: UIViewController, UICollectionViewDelegate, UICo
             switch item {
             case .main(let photoData):
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
-                cell.bindTo(data: photoData)
+                cell.bindTo(data: .server(photoData))
+                return cell
+                
+            case .savedData(let data):
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
+                cell.bindTo(data: .coredata(data))
                 return cell
             }
         })
@@ -80,8 +91,12 @@ final class MainViewController: UIViewController, UICollectionViewDelegate, UICo
         let outputs = viewModel.getData(inputs: inputs)
         
         outputs.dataSource.drive(onNext: { [unowned self] dataSource in
-            self.datasource.apply(dataSource, animatingDifferences: false)
-            }).disposed(by: disposeBag)
+            if dataSource.itemIdentifiers.isEmpty {
+                
+            } else {
+                self.datasource.apply(dataSource, animatingDifferences: false)
+            }
+        }).disposed(by: disposeBag)
         
         refreshRelay.accept(true)
     }
@@ -137,13 +152,20 @@ extension MainViewController {
             fatalError("init(coder:) has not been implemented")
         }
         
-        func bindTo(data: MarsPhoto.PhotoData) {
-            
-            let imageConfig = UIImage.SymbolConfiguration(pointSize: 55, weight: .black)
-            let placeholder = UIImage(systemName: "house", withConfiguration: imageConfig)
-            imageView.imageFromServerURL(data.img_src, placeHolder: placeholder)
-            
-            label.text = data.rover.name
+        func bindTo(data: DataOrigin) {
+            switch data {
+            case .coredata(let photo):
+                label.text = photo.roverName
+                imageView.image = UIImage(data: photo.photo ?? Data())
+
+            case .server(let data):
+                let imageConfig = UIImage.SymbolConfiguration(pointSize: 55, weight: .black)
+                
+                let placeholder = UIImage(systemName: "house", withConfiguration: imageConfig)
+                imageView.imageFromServerURL(data.img_src, placeHolder: placeholder, imageName: data.rover.name)
+                
+                label.text = data.rover.name
+            }
         }
     }
 }

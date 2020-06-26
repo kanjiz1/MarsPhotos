@@ -32,7 +32,14 @@ final class ViewModel {
                 photoData.photos.forEach { photo in
                     datasource.appendItems([.main((photo))], toSection: .main)
                 }
-            default:
+            case .error:
+                datasource.appendSections([.main])
+                let savedData = MarsDatabaseHelper.instance.fetch()
+                savedData.forEach { data in
+                    datasource.appendItems([.savedData(data)], toSection: .main)
+                }
+                
+            case .completed:
                 break
             }
             
@@ -50,7 +57,7 @@ extension UIImageView {
         return cache
     }
 
-    func imageFromServerURL(_ URLString: String, placeHolder: UIImage?) {
+    func imageFromServerURL(_ URLString: String, placeHolder: UIImage?, imageName: String = "") {
         self.image = nil
 
         let imageServerUrl = URLString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
@@ -85,6 +92,8 @@ extension UIImageView {
                         if let downloadedImage = UIImage(data: data) {
                             self.imageCache.setObject(downloadedImage, forKey: NSString(string: imageServerUrl))
                             self.image = downloadedImage
+                            
+                            MarsDatabaseHelper.instance.save(imageData: downloadedImage.pngData() ?? Data(), name: imageName)
                         }
                     }
             }
